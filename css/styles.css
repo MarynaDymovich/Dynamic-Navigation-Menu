@@ -1,0 +1,169 @@
+/* ---- Base Rules ---- */
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+/* Typeography General*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+        margin: 2em 4rem 1em;
+    }
+}
+
+h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+main {
+    margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+/* Navigation Styles*/
+.navbar__menu ul {
+    padding-left: 20px;
+    margin: 20px;
+    text-align: right;
+}
+
+.navbar__menu li {
+	padding: 20px;
+    display: inline-block;
+	background-color: rgb(136,203,171);
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+/* Active Class in NavBar */
+#navbar__list a:hover {
+    color: grey;
+}
+
+#navbar__list li.active{
+	background-color:#1D7373;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Hamburger Menu */
+.navbar__menu a.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar__menu li {
+        display: none;
+    }
+    
+    .navbar__menu a.hamburger {
+        float: right;
+        display: block;
+        font-size: 50px;
+    }
+
+    .navbar__menu.responsive li {
+        position: relative;
+    }
+  
+    .navbar__menu.responsive a.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+
+    .navbar__menu.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+}
+
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+	top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 3em;
+    color: #fff;
+}
+
+.page__footer p{
+    color: #fff;
+}
+
+/* Landing Container Styles */
+.landing__container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right; 
+}
+
+/* Section Active Styles */
+.your-active-class {
+    background-color: rgb(136,203,171);
+	animation: rotate 8s linear 0s infinite forwards;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
